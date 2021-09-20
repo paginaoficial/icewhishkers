@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8d62243779.js" crossorigin="anonymous"></script>
+    <title>Menú de helados</title>
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background: white;
+}
+
+
+         body::-webkit-scrollbar-thumb{
+            border-radius: 10px;
+            animation: scrollfondo 1s linear alternate;
+            background: linear-gradient( #d53032,white);
+        }
+
+                body::-webkit-scrollbar{
+            width: 5px;
+
+            
+            background-color: transparent;
+            
+
+
+        }
+#helado{
+    text-align: center;
+    padding: 100px;
+    font-family: 'Amatic SC', cursive;
+    visibility: hidden;
+    display: none;
+}
+
+
+
+
+
+.container__card{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    filter: drop-shadow(5px 5px 5px black);
+}
+
+.card__father{
+    margin: 20px;
+    perspective: 1000px;
+}
+
+.card__father:hover .card{
+    transform: rotateY(180deg);
+}
+
+
+.card{
+    width: 350px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 600ms;
+}
+
+.card__front{
+    background-size: cover;
+    background-position: center;
+}
+
+
+.card__front,
+.card__back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+}
+
+.card__back{
+    transform: rotateY(180deg);
+    background: white;
+}
+
+.body__card_front{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transform: translateZ(60px);
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+    border-radius: 20px;
+}
+
+.body__card_back{
+    padding: 40px;
+    text-align: center;
+    transform: translateZ(60px);
+
+}
+
+.body__card_back p{
+    margin-top: 30px;
+    font-size: 25px;
+
+}
+
+.body__card_back button{
+    padding: 10px 40px;
+    margin-top: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: #58B0F6;
+    box-shadow: 1px 1px 30px -5px #58B0F6;
+    border-radius: 10px;
+    transition: box-shadow 600ms;
+}
+
+.body__card_back button:hover{
+    box-shadow: 1px 1px 30px 0px #449de6;
+}
+</style>
+<body>
+    
+    <main>
+
+        <div class="container__card">
+
+            <div class="card__father">
+                <div class="card">
+                    <div class="card__front" style="background-image: url(https://www.antena3.com/newa3flash/modulos_blancos/cocinatis/heladofresa2.jpg);">
+                        <div class="bg"></div>
+                        <div class="body__card_front">
+                            <h1>HELADO DE FRESA</h1>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="body__card_back">
+                            <h1>25 Lps.</h1>
+                            <p> Helado sencillo de fresa, con galleta sorbete de tamaño mediano. Producto natural, sin preservantes artificiales. </p>
+                            <form action="carrito.html">
+                                <button class="boton" >Comprar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__father">
+                <div class="card">
+                    <div class="card__front" style="background-image: url(https://www.seekpng.com/png/detail/295-2952706_conos-de-helado-vainilla.png);">
+                        <div class="bg"></div>
+                        <div class="body__card_front">
+                            <h1>HELADO DE VAINILLA</h1>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="body__card_back">
+                            <h1>25 Lps.</h1>
+                            <p>Helado sencillo de vainilla, con galleta sorbete de tamaño mediano. Producto natural, sin preservantes artificiales.</p>
+                            <form action="carrito.html">
+                                <button class="boton" >Comprar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__father">
+                <div class="card">
+                    <div class="card__front" style="background-image: url(https://ventuscorp.cl/wp-content/uploads/2019/09/Mezcla-en-polvo-para-helados-soft-Chocolate.jpg);">
+                        <div class="bg"></div>
+                        <div class="body__card_front">
+                            <h1>HELADO DE CHOCOLATE</h1>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="body__card_back">
+                            <h1>25 Lps.</h1>
+                            <p>Helado sencillo de chocolate, con galleta sorbete de tamaño mediano. Producto natural, sin preservantes artificiales.</p>
+                            <form action="carrito.html">
+                                <button class="boton" >Comprar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__father">
+                <div class="card">
+                    <div class="card__front" style="background-image: url(https://media.istockphoto.com/photos/pistachio-ice-cream-cone-picture-id475871014?k=20&m=475871014&s=612x612&w=0&h=xRoLC9LJ5fYDvYRR5gOEBzcsYhhhnY_E-Bw__jhtNnc=);">
+                        <div class="bg"></div>
+                        <div class="body__card_front">
+                            <h1>HELADO DE PISTACHO</h1>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="body__card_back">
+                            <h1>25 Lps.</h1>
+                            <p>Helado sencillo de pistacho, con galleta sorbete de tamaño mediano. Producto natural, sin preservantes artificiales.</p>
+                            <form action="carrito.html">
+                                <button class="boton" >Comprar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__father">
+                <div class="card">
+                    <div class="card__front" style="background-image: url(https://froneri.com.ar/images/product-images/oreo/OREO-Productos-cono.jpg);">
+                        <div class="bg"></div>
+                        <div class="body__card_front">
+                            <h1>HELADO DE OREO</h1>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="body__card_back">
+                            <h1>25 Lps.</h1>
+                            <p>Helado sencillo de de galleta oreo, con galleta sorbete de tamaño mediano. Producto natural, sin preservantes artificiales.</p>
+                            <form action="carrito.html">
+                                <button class="boton" >Comprar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="card__father">
+                <div class="card">
+                    <div class="card__front" style="background-image: url(https://scontent-mia3-1.xx.fbcdn.net/v/t1.6435-9/p526x296/41279358_1930020210399327_5440580797788585984_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=9267fe&_nc_eui2=AeHJjHpJJqtqzGULw-U4x2N08K0CtsDLq2XwrQK2wMurZS37WoAX9AeDWPFyI2zxyHTHBdMnEaZTncOlewTwIR2_&_nc_ohc=o7tPB827dT4AX_Dbwxw&_nc_ht=scontent-mia3-1.xx&oh=a7d6a906dbc33b7ef409ba9bea86c27d&oe=616B2BAF);">
+                        <div class="bg"></div>
+                        <div class="body__card_front">
+                            <h1>HELADO DE RON CON PASAS</h1>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="body__card_back">
+                            <h1>25 Lps.</h1>
+                            <p>Helado sencillo de ron con pasas, con galleta sorbete de tamaño mediano. Producto natural, sin preservantes artificiales.</p>
+                            <form action="carrito.html">
+                                <button class="boton" >Comprar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </main>
+
+    <h1 id="helado">Paletas</h1>
+    
+    <main>
+
+        <div class="container__card">
+
+            <div class="card__father">
+                <div class="card">
+                    <div class="card__front" style="background-image: url(img/fresa.jpg);">
+                        <div class="bg"></div>
+                        <div class="body__card_front">
+                            <h1>PALETA DE FRESA</h1>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="body__card_back">
+                            <h1>20 Lps.</h1>
+                            <p>Paleta sencilla de fresa, elaborada de manera artesanal. Hecha con frutas, producto 100% natural, sin preservantes artificiales. </p>
+                            <form action="carrito.html">
+                                <button class="boton" >Comprar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__father">
+                <div class="card">
+                    <div class="card__front" style="background-image: url(https://www.pngkey.com/png/detail/412-4120333_paleta-de-vainilla-paletas-de-hielo-vainilla.png);">
+                        <div class="bg"></div>
+                        <div class="body__card_front">
+                            <h1>PALETA DE VAINILLA</h1>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="body__card_back">
+                            <h1>20 Lps.</h1>
+                            <p>Paleta sencilla de vainilla, elaborada de manera artesanal. Hecha con producto 100% natural, sin preservantes artificiales.</p>
+                            <form action="carrito.html">
+                                <button class="boton" >Comprar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__father">
+                <div class="card">
+                    <div class="card__front" style="background-image: url(https://s.cornershopapp.com/product-images/3836945.jpg?versionId=fyVqZFrfwGXh4A49oVnUzzIZMuoZ65cn);">
+                        <div class="bg"></div>
+                        <div class="body__card_front">
+                            <h1>PALETA DE CHOCOLATE</h1>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="body__card_back">
+                            <h1>20 Lps.</h1>
+                            <p>Paleta sencilla de chocolate, elaborada de manera artesanal. Hecha con producto 100% natural, sin preservantes artificiales.</p>
+                            <form action="carrito.html">
+                                <button class="boton" >Comprar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__father">
+                <div class="card">
+                    <div class="card__front" style="background-image: url(https://flordelunaheladeria.com/wp-content/uploads/2020/09/23paleta.jpg);">
+                        <div class="bg"></div>
+                        <div class="body__card_front">
+                            <h1>PALETA DE PISTACHO</h1>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="body__card_back">
+                            <h1>20 Lps.</h1>
+                            <p>Paleta sencilla de pistacho, elaborada de manera artesanal. Hecha con producto 100% natural, sin preservantes artificiales.</p>
+                            <form action="carrito.html">
+                                <button class="boton" >Comprar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__father">
+                <div class="card">
+                    <div class="card__front" style="background-image: url(https://s.cornershopapp.com/product-images/2123919.png?versionId=CYD_C9Ugo4SuaqQQJvj4RneFwnbS.ahB);">
+                        <div class="bg"></div>
+                        <div class="body__card_front">
+                            <h1>PALETA DE OREO</h1>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="body__card_back">
+                            <h1>20 Lps.</h1>
+                            <p>Paleta sencilla de galleta oreo, elaborada de manera artesanal. Hecha con producto 100% natural, sin preservantes artificiales.</p>
+                            <form action="carrito.html">
+                                <button class="boton" >Comprar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card__father">
+                <div class="card">
+                    <div class="card__front" style="background-image: url(img/ron.jpg);">
+                        <div class="bg"></div>
+                        <div class="body__card_front">
+                            <h1>PALETA DE RON CON PASAS</h1>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="body__card_back">
+                            <h1>20 Lps.</h1>
+                            <p>Paleta sencilla de ron con pasas, elaborada de manera artesanal. Hecha con producto 100% natural, sin preservantes artificiales.</p>
+                            <form action="carrito.html">
+                                <button class="boton" >Comprar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+</body>
+</html>
+
+

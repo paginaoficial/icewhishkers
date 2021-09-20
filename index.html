@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/loguito.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Gochi+Hand&display=swap" rel="stylesheet">
+
+
+	<title>Ice Whiskers</title>
+
+	<style>
+		
+		
+
+
+
+		body{
+			background-color: #FCF0E3;
+			
+		}
+
+		img{
+			padding-top: 10%;
+			padding-right: 10%;
+			padding-left: 10%;
+
+			
+
+
+			
+		}
+
+		.carga{
+			width: 100%;
+			text-align: center;
+			height: 100%;
+			animation: carga 20s forwards ;
+			
+
+			
+			;
+		}
+
+		h2{
+			font-size: 40px;
+			font-family: 'Changa One', cursive;
+
+
+		}
+
+
+
+
+
+	</style>
+</head>
+<body>
+	
+	<div class="carga"><img src="img/cargando.gif"><h2>Cargando<span class="typed"></span></h2></div>
+	<audio src="audio/musica_cargando.mp3" autoplay="autoplay"></audio>
+	
+
+</body> 
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		const typed = new Typed(".typed", {
+			strings: [
+			"...",
+			 "...",
+			  "...",
+			  "..."
+
+			   ],
+			   typeSpeed: 75,
+			   startDelay: 300,
+			   backSpeed:75,
+			   smartBackspace: true,
+			   shuffle: false,
+			   backDelay: 200,
+			   loop: true,
+			   loopCount: false,
+			   showCursor: true,
+			   cursorChar: "",
+			   contenttype: "html"
+			   
+			   
+		});
+
+
+</script>
+<script>
+	setTimeout(function(){
+		window.location="index2.html"
+	},11000);
+
+
+	
+</script>
+
+</html>

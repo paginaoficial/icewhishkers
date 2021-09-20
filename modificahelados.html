@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Crea tu Helado!</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chela+One&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="slider/flexslider.css" type="text/css">
+    <script src="https://kit.fontawesome.com/8d62243779.js" crossorigin="anonymous"></script>  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="img/loguito.png">
+    
+ 
+</script>
+    <style>
+               
+
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+            overflow-x: hidden;
+        }
+
+                body::-webkit-scrollbar-thumb{
+            border-radius: 10px;
+            animation: scrollfondo 1s linear alternate;
+            background: linear-gradient( #d53032,#FFE8C6);
+            
+        }
+
+                body::-webkit-scrollbar{
+            width: 15px;
+
+            
+            background-color: transparent;
+            
+
+
+        }
+
+        nav{
+            background-image: url(img/fondonav.png);
+            padding-bottom: 10vh;
+            position: fixed;
+            color: white;
+            filter: drop-shadow(5px 5px 10px black);
+            width: 100%;
+            background-size: 38%;
+            background-repeat: no-repeat;
+            background-repeat: repeat-x;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        header h1{
+            color: var(--white-text);
+            font-size: 3rem;
+            letter-spacing: .5rem;
+            font-family: 'Chela One', cursive;
+            filter: drop-shadow(5px 5px 5px black);
+        }
+
+        nav ul{
+            display: flex;
+        }
+
+        nav ul li{
+            border-right: solid .1rem pink;
+        }
+
+        nav ul li:last-child{
+            border-right: none;
+        }
+
+        nav ul li a {
+            color: var(--white-text);
+            font-size: 1.2rem;
+            padding: .8rem 1rem;
+            text-transform: uppercase;
+        }
+
+        nav ul li a:hover{
+            background-color: var(--button-hover);
+            transition: all .3s;
+        }
+
+        .drawer{
+            color: var(--white-text);
+            float: left;
+            cursor: pointer;
+            display: none;
+            margin-left: 1rem;
+            border: solid .1rem var(--white-text);
+            padding: .2rem;
+            border-radius: .1rem;
+        }
+
+        #ckbox{
+            display: none;
+        }
+
+        /* Estilos de la seccion principal */
+
+       
+        .content{
+            
+            width: 100%;
+            height: 100%;
+        }
+        main{
+            padding-top: 4rem;
+            justify-content: center;
+            align-items: center;
+            height: 200vh;
+            
+        }
+
+        main h1{
+            font-size: 1.7rem;
+            color: var(--black-text);
+            text-align: center;
+            margin: 1rem;
+        }
+
+        main p{
+            color: var(--black-text);
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        main form{
+            display: flex;
+            justify-content: center;
+        }
+
+        main form button{
+            margin: 0 .5rem;
+            width: 8rem;
+            height: 2.5rem;
+            font-size: 1.1rem;
+        }
+
+
+
+               /*Paletas y Helados*/
+
+    .helados{
+        width: 100%;
+        height: 100%;
+        border: 0;
+
+    }
+
+    .slider{
+        width: 100%;
+        height: 60%;
+        border: 0;
+        margin-bottom: -1%;
+
+    }
+
+    nav li a:hover{
+        
+        text-shadow: 3px 3px 10px white;
+        font-size: 1.5em;
+        transition: all .3s;
+
+    }
+
+
+/*Paletas y Helados (Fin) */
+
+       #gatito{
+        width: 8%;
+        height: 8%;
+
+       }
+
+
+   
+       
+       #heladofon img{
+
+
+    width: 100%;
+}
+
+#proximamente{
+    color: white;
+    width: 100%;
+    padding: 5%;
+    background-image: url(https://i.pinimg.com/originals/0d/88/0a/0d880a574c99345843a4d782d351e215.gif);
+
+}
+
+
+h2{
+    
+    color: white;
+    text-align: center;
+    font-family: 'Cherry Cream Soda', cursive;
+    font-size: 80px;
+    text-shadow: 5px 5px 10px black;
+    
+
+}
+
+#heladofon{
+    width: 100%;
+    background-image: url(https://i.pinimg.com/originals/53/58/24/53582465d8ac7c33c1f2888294fed4e3.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    margin-top: 0;
+
+    
+}
+
+.sabores{
+	background-color: coral;
+	height: autos;
+	width: 100%;
+	margin-top: 10%;
+	text-align: center;
+    margin-bottom: 5%;
+	
+    align-content: space-around;
+    
+    
+
+
+	
+	
+}
+
+.saboreseleccion input{
+    display: none;
+
+}
+
+.saboreseleccion img{
+    width: 100px;
+    border: 8px solid transparent;
+    cursor: pointer;
+     opacity: 0.7;
+}
+
+.saboreseleccion img:hover{
+    border: 3px dashed black;
+     opacity: 1;
+     border-radius: 5px;
+     transition: all .2s;
+
+    
+
+}
+
+
+
+.saboreseleccion input:checked + img{
+    border-color: black;
+     opacity: 1;
+     border-radius: 5px;
+     transition: all .1s;
+
+
+
+
+}
+
+
+a{
+    color: white;
+}
+
+h2{
+    text-align: center;
+   
+    
+}
+.subsabores{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+
+#chocolate{
+   width: 25%;
+    height: 30%;
+    filter: drop-shadow(2px 2px 10px black);
+}
+
+#vainilla{
+    width: 25%;
+    height: 30%;
+    filter: drop-shadow(2px 2px 10px black);
+}
+
+#fresa{
+    width: 25%;
+    height: 30%;
+    filter: drop-shadow(2px 2px 10px black);
+}
+
+
+.agregados{
+    background-color: coral;
+    height: auto;
+    width: 100%;
+    
+    text-align: center;
+     margin-bottom: 5%;
+    align-content: space-around;
+    
+}
+
+.agregadosseleccion input{
+    display: none;
+
+}
+
+.agregadosseleccion img{
+    width: 100px;
+    border: 8px solid transparent;
+    cursor: pointer;
+     opacity: 0.7;
+}
+
+.agregadosseleccion img:hover{
+    border: 3px dashed black;
+     opacity: 1;
+     border-radius: 5px;
+     transition: all .2s;
+
+    
+
+}
+
+
+
+.agregadosseleccion input:checked + img{
+    border-color: black;
+     opacity: 1;
+     border-radius: 5px;
+     transition: all .1s;
+
+
+
+}
+
+.agregadosseleccion img{
+    width: 30%;
+    height: 70%;
+}
+
+.subagregados{
+    width: 100%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+
+.ordena{
+    text-align: center;
+    width: 50%;
+    cursor: pointer;
+    height: auto;
+    font-size: 40px;
+    font-family: 'Cherry Cream Soda', cursive;
+    background-color: coral;
+    color: white
+
+
+
+}
+
+.ordena:hover{
+    background-color: white;
+    border-radius: 10px;
+    transition: all .3s;
+    color: black;
+}
+
+.ord{
+    width: 100%;
+    text-align: center;
+    height: 15vh;
+}
+
+
+
+
+      
+
+ 
+
+
+
+
+        @media(max-width:1020px){
+
+            nav{
+                justify-content: flex-start;
+                width: 100%;
+                
+
+
+            }
+
+            .ordena{
+                width: 80%;
+            }
+
+
+
+            h2{
+                font-size: 50px;
+            }
+
+
+
+            #gatito{
+                display: none;
+            }
+
+            .drawer{
+                display: block;
+            }
+
+            nav h1{
+                margin-left: 1rem;
+            }
+
+            ul{
+                position: fixed;
+                width: 50%;
+                height: 100vh;
+                background-color: var(--background);
+                top: 10vh;
+                left: -100%;
+                text-align: left;
+                transition: all .5s;
+                display: flex;
+                flex-direction: column;
+                align-content: stretch;
+            }
+
+            nav ul li{
+                padding: 1rem 0;
+                display: flex;
+                flex-direction: column;
+                padding-left: 2rem;
+                border-bottom: solid .1rem rgba(201, 196, 196, 0.4) ;
+                background-color: pink;
+                text-align: center;
+            }
+
+            #ckbox:checked ~ .menu-box{
+                left: 0;
+            }
+
+            .image{
+                display: none;
+            }
+            .content{
+                width: 100%;
+                height: 100%;
+            }
+
+             .sabores{
+                    height: auto;
+                }
+
+            @media screen and (max-width: 700px){
+                nav h1{
+                    font-size: 20px;
+                }
+                 .sabores{
+                    height: auto;
+                }
+            }
+
+            .ordena{
+                font-size: 20px;
+            }
+
+
+
+
+
+            @media screen and (max-width: 370px){
+                h2{
+                    font-size: 40px;
+                }
+
+                 .sabores{
+                    height: auto;
+                }
+
+            }
+
+            @media screen and (max-width: 280px){
+                h2{
+                    font-size: 30px;
+                }
+
+                .sabores{
+                    height: auto;
+                }
+
+                .ordena{
+                    font-size: 15px;
+                }
+
+            }
+
+            @media screen and (max-width: 200px){
+                h2{
+                    font-size: 20px;
+                }
+
+                 .sabores{
+                    height: auto;
+                }
+
+            }
+     
+     
+
+
+        </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <input type="checkbox" id="ckbox">
+            <label for="ckbox" class="drawer">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+            <img  id="gatito" src="http://assets.stickpng.com/images/587e32399686194a55adab76.png"><a  href="index2.html"><h1>Ice Whiskers</h1></a>
+            <ul class="menu-box">
+                <li><a href="modificahelados.html" class="fas fa-ice-cream"> ¡Crea tu Helado!</a></li>
+
+                <li><a href="contacto.html" class="fas fa-id-card"> Contacto</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+
+        <div class="content">
+
+         	<div class="sabores">
+                <h2>Escoja el sabor de su preferencia...</h2>
+               
+
+                 
+            </div>
+            <div class="subsabores">    
+             <label class="saboreseleccion">
+                     <input type="radio" name="sabores" id="chocolate" >
+                     <img id="chocolate" id="sabores" src="img/modificar helado/chocolate.png" id="a">
+                     
+              </label>
+
+              <label class="saboreseleccion">
+                     <input type="radio" name="sabores" id="vainilla">
+                     <img id="vainilla" id="sabores"  src="img/modificar helado/vainilla.png" id="a">
+                     
+              </label>
+
+              <label class="saboreseleccion">
+                     <input type="radio" name="sabores" id="fresa">
+                     <img id="fresa" id="sabores"  src="img/modificar helado/fresa.png" id="a">
+                     
+              </label>
+              </div>
+
+            <div class="agregados">
+                <h2>Proximamente...</h2>
+                
+
+            </div>  
+            <div class="subagregados"> 
+                    <label class="agregadosseleccion">
+                    <input type="checkbox" name="agregados" id="oreo">
+                    <img src="img/modificar helado/oreo.png">
+                </label>
+                 
+               
+                <label class="agregadosseleccion">
+                    <input type="checkbox" name="agregados" id="fruta" >
+                    <img src="img/modificar helado/fresafruta.png">
+                </label>
+               
+                <label class="agregadosseleccion">
+                    <input type="checkbox" name="agregados" id="cereza" >
+                    <img src="img/modificar helado/cereza.png">
+                </label>
+
+
+            </div>  
+               <div class="ord">
+                        <input class="ordena" type="button" name="ordenar" value="¡Crea Tu Helado!" onclick="comp()">
+                </div> 
+
+        </div>
+        
+        
+    </main>
+        
+
+
+   
+</body>
+</html>
+
+<script>
+
+   function comp(){
+        if(document.getElementById("chocolate").checked==true){
+            setTimeout(function(){
+            window.location="img/modificar helado/varianteschocolate/cargachocolate.html"
+            },20);  
+        }
+
+        if(document.getElementById("fresa").checked==true){
+            setTimeout(function(){
+            window.location="img/modificar helado/variantesfresa/cargafresa.html"
+            },20);  
+        }
+
+        if(document.getElementById("vainilla").checked==true){
+            setTimeout(function(){
+            window.location="img/modificar helado/variantesvainilla/cargavainilla.html"
+            },20);  
+        }
+
+    } 
+</script>
+
+
+
+
+
+
+
+
+
+
+
+

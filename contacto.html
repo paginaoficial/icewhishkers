@@ -1,0 +1,435 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type"content="text/html; charset=utf-8"/>
+		<meta name="viewport"content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Contacto</title>
+		<script src="https://kit.fontawesome.com/8d62243779.js" crossorigin="anonymous"></script>  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chela+One&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="slider/flexslider.css" type="text/css">
+    <script src="https://kit.fontawesome.com/8d62243779.js" crossorigin="anonymous"></script>  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="img/loguito.png">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			height: 100vh;
+			display: grid;
+			align-items: center;
+			font-family: 'Poppins', sans-serif;
+			background-color
+		}
+
+		nav{
+            background-image: url(img/fondonav.png);
+            padding-bottom: 18vh;
+            position: fixed;
+            color: white;
+            filter: drop-shadow(5px 5px 10px black);
+            width: 100%;
+            background-size: 38%;
+            background-repeat: no-repeat;
+            background-repeat: repeat-x;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        header h1{
+            color: var(--white-text);
+            font-size: 3rem;
+            letter-spacing: .5rem;
+            font-family: 'Chela One', cursive;
+            filter: drop-shadow(5px 5px 5px black);
+            top: 0;
+        }
+
+        nav ul{
+            display: flex;
+        }
+
+        nav ul li{
+            border-right: solid .1rem pink;
+             list-style: none;
+        }
+
+        nav ul li:last-child{
+            border-right: none;
+             list-style: none;
+        }
+
+        nav ul li a {
+            color: var(--white-text);
+            font-size: 1.2rem;
+            padding: .8rem 1rem;
+            text-decoration: none;
+
+
+        }
+
+        nav ul li a:hover{
+            background-color: var(--button-hover);
+            transition: all .3s;
+        }
+        nav li a:hover{
+        
+        text-shadow: 3px 3px 10px white;
+        font-size: 1.5em;
+        transition: all .3s;
+
+    	}
+
+        .drawer{
+            color: var(--white-text);
+            float: left;
+            cursor: pointer;
+            display: none;
+            margin-left: 1rem;
+            border: solid .1rem var(--white-text);
+            padding: .2rem;
+            border-radius: .1rem;
+        }
+
+        #gatito{
+        width: 8%;
+        height: 8%;
+       }
+       #ckbox{
+            display: none;
+        }
+
+        form button{
+        	cursor: pointer;
+        }
+
+
+		.contact-wrap {
+			width: 80%;
+			height: auto;
+			margin: auto;
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 10%;
+		}
+
+		.contact-in {
+			padding: 40px 30px;
+		}
+
+		.contact-in:nth-child(1) {
+			flex: 30%
+			color: white;
+			background-image: url(contact.gif);
+			background-repeat: no-repeat;
+			background-position: center;
+			
+		}
+		.contact-wrap{
+			background: #DD6C8E;
+			margin-top: 220px;
+			border-radius:  20px;
+			margin-bottom: 10%;
+		}
+
+
+		.contact-in:nth-child(2) {
+			flex: 45%;
+			background: #00336C;
+			border-top-right-radius: 20px;
+		}
+
+		.contact-in:nth-child(3) {
+			flex: 25%;
+			padding: 0;
+		}
+
+		.contact-in h1 {
+			font-size: 24px;
+			color: white;
+			text-transform: uppercase;
+			font-weight: 500;
+			margin-bottom: 20px;
+		}
+
+		.contact-in h2 {
+			font-size: 20px;
+			font-weight: 400;
+			margin-bottom: 15px;
+			color: white;
+			text-shadow: 0px 5px 10px #000;
+		}
+
+		.contact-in h2 i {
+			font-size: 16px;
+			width: 40px;
+			height: 40px;
+			margin-right: 10px;
+			background: #fff;
+			color: #000;
+			border-radius: 50px;
+			line-height: 40px;
+			text-align: center;
+		}
+
+		.contact-in p {
+			font-size: 14px;
+			font-weight: 300;
+			margin-bottom: 20px;
+			color: white;
+			text-shadow: 0px 5px 10px #000;
+		}
+
+		.contact-in ul {
+			padding: 0;
+			margin: 0;
+		}
+
+		.contact-in ul li {
+			list-style: none;
+			display: inline-block;
+			margin-right: 5px;
+			margin-top: 5px;
+		}
+
+		.contact-in ul li a {
+			display: block;
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			background: #000;
+			border-radius: 50px;
+		}
+
+		.contact-in ul li a i {
+			font-size: 14px;
+			line-height: 30px;
+			color: #fff;
+
+		}
+
+		a{
+			color: white;
+			text-decoration: none;
+		}
+
+		iframe{
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+		}
+
+		.contact-in form {
+			width: 100%;
+			height: auto;
+		}
+
+		.contact-in-input {
+			width: 100%;
+			height: 40px;
+			margin-bottom: 20px;
+			border: none;
+			outline: none;
+			padding-left: 5px;
+			background-color: lightslategray;
+			color: #fff;
+			font-size: 12px;
+			font-weight: 300;
+			font-family: 'Poppins', sans-serif;
+			box-shadow: 0px 0px 5px 5px lightslategray;
+		}
+
+		.contact-in-input::placeholder {
+			color: #fff;
+		}
+
+		.contact-in-textarea {
+			width: 100%;
+			height: 140px;
+			margin-bottom: 20px;
+			border: none;
+			outline: none;
+			padding-top: 5px;
+			padding-left: 5px;
+			background-color: lightslategray;
+			color: #fff;
+			font-size: 12px;
+			font-weight: 300;
+			font-family: 'Poppins', sans-serif;
+			box-shadow: 0px 0px 5px 5px lightslategray;
+		}
+
+		.contact-in-textarea::placeholder {
+			color: #fff;
+			
+		}
+		textarea{
+			resize: vertical;
+		}
+
+		.negropelon{
+			height: 4%;
+			margin-top: 2%;
+		}
+		.contact-in-btn {
+			width: 100%;
+			height: 40px;
+			border: none;
+			outline: none;
+			background-color: lightslategray;
+			color: #fff;
+			font-size: 12px;
+			font-weight: 300;
+			font-family: 'Poppins', sans-serif;
+			cursor: pointer;
+			box-shadow: 0px 0px 5px 5px lightslategray;
+		}
+
+		.contact-in iframe {
+			width: 100%;
+			height: 100%;
+		}
+
+		@media only screen and (max-width:480px) {
+			.contact-in:nth-child(1) {
+				flex: 50%;
+			}
+
+			.contact-in:nth-child(2) {
+				flex: 50%;
+			}
+
+			.contact-in:nth-child(3) {
+				flex: 100%;
+			}
+
+		}
+
+		@media only screen and (max-width:360px) {
+			.contact-in:nth-child(1) {
+				flex: 50%;
+			}
+
+			.contact-in:nth-child(2) {
+				flex: 50%;
+			}
+
+			.contact-in:nth-child(3) {
+				flex: 100%;
+			}
+
+		}
+
+		 @media(max-width:1020px){
+
+            nav{
+                justify-content: flex-start;
+            }
+
+            #gatito{
+            	display: none;
+            }
+
+            .drawer{
+                display: block;
+            }
+
+            nav h1{
+                margin-left: 1rem;
+            }
+
+            ul{
+                position: fixed;
+                width: 50%;
+                height: 100vh;
+                background-color: var(--background);
+                top: 10vh;
+                left: -100%;
+                text-align: left;
+                transition: all .5s;
+                display: flex;
+                flex-direction: column;
+                align-content: stretch;
+            }
+
+            nav ul li{
+                padding: 1rem 0;
+                display: flex;
+                flex-direction: column;
+                padding-left: 2rem;
+                border-bottom: solid .1rem rgba(201, 196, 196, 0.4) ;
+                background-color: pink;
+                text-align: center;
+            }
+
+            #ckbox:checked ~ .menu-box{
+                left: 0;
+            }
+
+            .image{
+                display: none;
+            }
+
+	</style>
+	<body>
+
+		<header>
+        <nav>
+            <input type="checkbox" id="ckbox">
+            <label for="ckbox" class="drawer">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+            <img id="gatito" src="img/contacto.png"><a href="index2.html"><h1>Ice Whiskers</h1></a>
+            <ul class="menu-box">
+                <li><a href="modificahelados.html" class="fas fa-ice-cream"> ¡Crea tu Helado!</a></li>
+               
+                <li><a href="contacto.html" class="fas fa-id-card"> Contacto</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+		<div class="contact-wrap">
+			<div class="contact-in">
+				
+				<h1><b>Información de contacto</b></h1>
+				<h2><i class="fa fa-phone" aria-hidden="true"></i> <b>Teléfono</b></h2>
+				<p><b>+504 2771 7042</b></p>
+				<h2><i class="fa fa-envelope" aria-hidden="true"></i> <b>Email</b></h2>
+				<p><b>icewhisker@gmail.com</b></p>
+				<h2><i class="fa fa-map-marker" aria-hidden="true"></i> <b>Dirección</b></h2>
+				<p><b>Barrio San Francisco, Comayagua Honduras.</b></p>
+				<ul>
+					<li><a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="https://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="https://www.google.com"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+					<li><a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+			<div class="contact-in">
+				<h1>Contacta a Ice Whiskers</h1>
+				<form>
+					<input type="text" placeholder="Nombre completo" class="contact-in-input">
+					<input type="text" placeholder="Email" class="contact-in-input">
+					<input type="text" placeholder="Teléfono" class="contact-in-input">
+					<textarea placeholder="Mensaje" class="contact-in-textarea" ></textarea>
+					<input type="submit" value="ENVIAR" class="contact-in-btn">
+				</form>
+			</div>
+			<div class="contact-in">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.3894387349933!2d-87.6432667856812!3d14.462313184329073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f658f61b2d5f1cd%3A0x40d515286c3aa769!2sInstituto%20Marista%20La%20Inmaculada!5e0!3m2!1ses!2shn!4v1632097654959!5m2!1ses!2shn" width="100%" height="auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+		</div>
+		<div class="negropelon"></div>
+	</body>
+</html>
